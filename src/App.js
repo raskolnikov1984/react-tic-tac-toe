@@ -35,6 +35,7 @@ export default function Game() {
   return (
     <div className="game">
       <div className="game-board">
+        <MainTittle />
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div className="game-info">
@@ -42,6 +43,12 @@ export default function Game() {
       </div>
     </div>
   )
+}
+
+function MainTittle() {
+  return (
+    <h1>Tic-Tac-Toe</h1>
+  );
 }
 
 function Board({ xIsNext, squares, onPlay }) {
